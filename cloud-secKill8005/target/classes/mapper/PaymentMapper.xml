@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spike.cloud.dao.SecKillDao">
+
+    <insert id="addItem" parameterType="Item" useGeneratedKeys="true" keyProperty="quantity">
+        insert into secKill_stock values (#{id}, #{quantity});
+    </insert>
+        
+    <resultMap id="ItemMap" type="com.spike.cloud.entities.Item">
+        <id column="movie_id" property="id" jdbcType="VARCHAR"/>
+        <id column="quantity" property="quantity" jdbcType="BIGINT"/>
+    </resultMap>
+    <select id="getItemById" parameterType="String" resultMap="ItemMap">
+        select * from secKill_stock where movie_id = #{id};
+    </select>
+
+    <select id="getItemList" resultMap="ItemMap">
+        select * from secKill_stock;
+    </select>
+</mapper>
