@@ -1,7 +1,6 @@
 package com.spike.cloud;
 
-import com.netflix.discovery.converters.Auto;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;

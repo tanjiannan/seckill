@@ -9,10 +9,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cloud-secKill8005" />
-        <module name="cloud-api-common" />
-        <module name="cloud-eureka7002" />
         <module name="cloud-eureka7001" />
+        <module name="cloud-eureka7002" />
+        <module name="cloud-api-common" />
+        <module name="cloud-consumer8001" />
+        <module name="cloud-secKill8005" />
+        <module name="coud-secKillOrder8008" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

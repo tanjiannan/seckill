@@ -60,16 +60,16 @@ public class SecKillController {
     }
 
     @GetMapping(value = "/item/secKill/{id}")
-    public CommonResponse secKill(HttpServletRequest request, @PathVariable("id") String item_id) {
-        HttpSession session = request.getSession();
+    public CommonResponse secKill(String session_id, @PathVariable("id") String item_id) {
+//        HttpSession session = request.getSession();
 //        if (session.getAttribute("isLogin") != null && (boolean)session.getAttribute("isLogin")) {
 //            // use user_email as id
 //            String user_id = (String)session.getAttribute("user_email");
 //            String res = secKillService.secKill(user_id, item_id);
 //            return new CommonResponse().Success(res);
 //        } else return new CommonResponse().Fail("Please sign in!", null);
-        // use user_email as id
-        String user_id = (String)session.getAttribute("user_email");
+        // use sessionId as id
+        String user_id = session_id;
         String res = secKillService.secKill(user_id, item_id);
         return new CommonResponse().Success(res);
     }

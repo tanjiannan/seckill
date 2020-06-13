@@ -13,6 +13,18 @@ spring:
   redis:
     host: localhost
     port: 6379
+  rabbitmq:
+    port: 5672
+    username: guest
+    password: guest
+    template:
+      mandatory: true
+    publisher-returns: true
+    publisher-confirm-type: correlated
+    listener:
+      simple:
+        acknowledge-mode: manual
+
 
 # mybatis
 mybatis:
@@ -28,5 +40,6 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka # eureka cluster
 
   instance:
-    instance-id: secKill8005
+    instance-id: secKill${server.port}
     prefer-ip-address: true
+

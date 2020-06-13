@@ -1,6 +1,7 @@
 package com.spike.cloud.service;
 
 import com.spike.cloud.entities.Item;
+import com.spike.cloud.entities.SecKillOrder;
 
 import java.util.List;
 
@@ -18,6 +19,8 @@ public interface SecKillService {
     List<Item>  getItemList();
 
     String secKill(String user_id, String item_id);
+
+    void sendOrder(SecKillOrder order);
 
     List<String> getOrderList();
 }
