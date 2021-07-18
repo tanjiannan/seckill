@@ -26,4 +26,10 @@ public class SecKillOrder {
         this.movieId = movieId;
         this.saleDate = saleDate;
     }
+    public SecKillOrde2r(String orderId, String customerId, String movieId, Date saleDate) {
+            this.orderId = orderId;
+            this.customerId = customerId;
+            this.movieId = movieId;
+            this.saleDate = saleDate;
+        }
 }
